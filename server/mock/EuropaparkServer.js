@@ -73,10 +73,8 @@ export default class EuropaparkServer {
             { time: 4, code: 3, type: 1, status: 0 },
             { time: 5, code: 4, type: 1, status: 0 },
             { time: 10, code: 5, type: 1, status: 0 },
-            { time: 15, code: 6, type: 1, status: 0 },
             { time: 15, code: 7, type: 1, status: 0 },
-
-
+            { time: 15, code: 6, type: 1, status: 0 },
         ]))
     }
 
