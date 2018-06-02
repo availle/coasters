@@ -5,12 +5,14 @@ import geb.spock.GebReportingSpec
 class CoasterPageSpec extends GebReportingSpec {
 
     def "Should open the coaster page and show coasters after loading"() {
-        when: "The user accesses the coaster page"
+        given: "A normal user enters the webpage"
+
+        when: "They access the coaster page"
         def page = to CoasterPage
 
-        then: "The first coaster should be called Superfast HyperCoaster"
+        then: "They should be at the Coaster page"
         waitFor {
-            page.firstCoaster.name.text() == 'Superfast HyperCoaster'
+           at CoasterPage
         }
     }
 }
