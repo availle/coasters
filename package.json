@@ -1,0 +1,44 @@
+{
+  "name": "coasters",
+  "version": "0.0.1",
+  "description": "A website to view the waiting times of the roller coasters in my favorite park!",
+  "main": "server/src/index.js",
+  "scripts": {
+    "server": "babel-node server/src/setup/index.js",
+    "test": "_mocha server/test --opts server/test/mocha.opts"
+  },
+  "keywords": [
+    "coasters",
+    "conference",
+    "tdd",
+    "bdd"
+  ],
+  "author": "fii",
+  "license": "ISC",
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "babel-watch": "^2.0.7",
+    "chai": "^4.1.2",
+    "mocha": "^5.2.0",
+    "sinon": "^5.0.10",
+    "sinon-chai": "^3.1.0"
+  },
+  "dependencies": {
+    "express": "^4.16.3",
+    "mobx": "^4.3.0",
+    "mobx-react": "^5.1.2",
+    "nock": "^9.2.6",
+    "simple-react-app": "^2.0.2",
+    "sinon-as-promised": "^4.0.3",
+    "themeparks": "git+https://github.com/availle/themeparks.git"
+  }
+}

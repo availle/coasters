@@ -1,0 +1,3 @@
+--recursive
+--require server/test/setupEnvironment.js
+--compilers jsx:babel-core/register,js:babel-core/register
