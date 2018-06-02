@@ -13,15 +13,6 @@ export default class EuropaparkServer {
             EuropaparkServer.sleep(1000).then(() => {
                 res.json([
                     {
-                        id: 34,
-                        code: 1,
-                        nameEnglish: 'Superfast HyperCoaster',
-                        active: true,
-                        thrill: 5,
-                        type: 1,
-                        open: 1
-                    },
-                    {
                         id: 35,
                         code: 2,
                         nameEnglish: 'Amazing KiddieRide',
@@ -36,6 +27,15 @@ export default class EuropaparkServer {
                         nameEnglish: 'Great Watercooler',
                         active: true,
                         thrill: 3,
+                        type: 1,
+                        open: 1
+                    },
+                    {
+                        id: 40,
+                        code: 7,
+                        nameEnglish: 'Superfast HyperCoaster',
+                        active: true,
+                        thrill: 5,
                         type: 1,
                         open: 1
                     },
@@ -69,12 +69,13 @@ export default class EuropaparkServer {
             })
         })
         this.server.get('/api-5.4/waitingtimes', (req, res) => res.json([
-            { time: 15, code: 1, type: 1, status: 0 },
             { time: 0, code: 2, type: 1, status: 0 },
             { time: 4, code: 3, type: 1, status: 0 },
             { time: 5, code: 4, type: 1, status: 0 },
             { time: 10, code: 5, type: 1, status: 0 },
             { time: 15, code: 6, type: 1, status: 0 },
+            { time: 15, code: 7, type: 1, status: 0 },
+
 
         ]))
     }
