@@ -2482,9 +2482,9 @@ text-encoding@^0.6.4:
   version "0.6.4"
   resolved "https://registry.yarnpkg.com/text-encoding/-/text-encoding-0.6.4.tgz#e399a982257a276dae428bb92845cb71bdc26d19"
 
-themeparks@^4.6.14:
+"themeparks@git+https://github.com/availle/themeparks.git":
   version "4.6.14"
-  resolved "https://registry.yarnpkg.com/themeparks/-/themeparks-4.6.14.tgz#adc6f7bca7cf7d690b20469c0e79952166ac3680"
+  resolved "git+https://github.com/availle/themeparks.git#b27fd57eab5e712d02161fb860367832abd06647"
   dependencies:
     bluebird "^3.5.1"
     cache-manager "^2.6.0"

@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CoasterPage/> should display coasters 1`] = `
+<div>
+  <table>
+    <thead>
+      <tr>
+        <td>
+          Name
+        </td>
+        <td>
+          Waiting time
+        </td>
+        <td>
+          Thrill
+        </td>
+      </tr>
+    </thead>
+    <tbody>
+      <Coaster
+        key="0"
+        name="test"
+        waitTime={3}
+      />
+    </tbody>
+  </table>
+</div>
+`;

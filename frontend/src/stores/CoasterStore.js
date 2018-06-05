@@ -3,14 +3,18 @@ import { observable, action } from 'mobx'
 export default class CoasterStore {
     @observable
     loading = true
+
     @observable
-    coasters = []
+    coasters = [ ]
 
     @action
     async get() {
         this.loading = true
-        const coasters = await fetch(`/coasters`).then(res => res.json())
-        this.coasters = coasters
+
+        const coasterResponse = await fetch(`http://localhost:3000/coasters`)
+
+        this.coasters = await coasterResponse.json()
+
         this.loading = false
     }
 }
