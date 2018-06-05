@@ -1,6 +1,6 @@
 {
   "presets": ["react", ["env", { "modules": false }]],
-  "plugins": ["react-hot-loader/babel", "babel-plugin-transform-object-rest-spread", "transform-decorators-legacy", "transform-class-properties", "transform-runtime"],
+  "plugins": ["babel-plugin-transform-object-rest-spread", "transform-decorators-legacy", "transform-class-properties", "transform-runtime"],
   "env": {
     "test": {
       "presets": ["react", ["env", { "modules": "commonjs" }]],
