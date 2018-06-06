@@ -4,18 +4,13 @@ export default class CoasterEndpoints {
         this.getCoasters = this.getCoasters.bind(this)
     }
 
-    getCoasters(req, res, next) {
-        console.log('getCoasters called')
+    async getCoasters(req, res, next) {
+        const coasters = await this.parkService.getCoasters()
+        const coastersMappedForFrontend = coasters.map(coaster => ({
+            name: coaster.name,
+            waitTime: coaster.waitTime
+        }))
 
-        return this.parkService.getCoasters().then((coasters) => {
-            return res.json(
-                coasters.map(
-                    coaster => ({
-                        name: coaster.name,
-                        waitTime: coaster.waitTime
-                    })))
-        }).catch(err => {
-            res.sendStatus(500)
-        })
+        res.json(coastersMappedForFrontend)
     }
 }
