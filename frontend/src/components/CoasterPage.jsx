@@ -21,7 +21,6 @@ export default class CoasterPage extends React.Component {
                         <tr>
                             <td>Name</td>
                             <td>Waiting time</td>
-                            <td>Thrill</td>
                         </tr>
                         </thead>
                         <tbody>

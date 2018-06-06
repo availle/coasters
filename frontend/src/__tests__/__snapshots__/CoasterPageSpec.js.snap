@@ -11,9 +11,6 @@ exports[`<CoasterPage/> should display coasters 1`] = `
         <td>
           Waiting time
         </td>
-        <td>
-          Thrill
-        </td>
       </tr>
     </thead>
     <tbody>
