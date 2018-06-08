@@ -3,7 +3,7 @@ import { shallow } from 'enzyme'
 
 import Coaster from '../components/Coaster'
 
-describe('<Coaster/>', function () {
+describe('<Coaster/>', () => {
     let renderedCoaster
 
     beforeEach(() => {
@@ -14,7 +14,7 @@ describe('<Coaster/>', function () {
         expect(renderedCoaster.find('.coaster-name').text()).toEqual('test')
     });
 
-    it('should render a wait time', function () {
+    it('should render a wait time', () => {
         renderedCoaster = shallow(<Coaster name='test' waitTime={3}/>)
         expect(renderedCoaster.find('.coaster-time').text()).toEqual('3')
     });
