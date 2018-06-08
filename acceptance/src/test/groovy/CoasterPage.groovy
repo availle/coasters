@@ -5,7 +5,7 @@ class CoasterPage extends Page {
     static at = { title == "Coasters!!!" }
 
     static content = {
-        coasters{ $(".coaster").moduleList(CoasterModule) }
+        coasters            { $(".coaster").moduleList(CoasterModule) }
     }
 
     def getFirstCoaster() {

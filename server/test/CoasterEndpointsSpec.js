@@ -21,13 +21,13 @@ describe('CoasterEndpoints', () => {
             requestSpy = {}
             coasterEndpoints = new CoasterEndpoints(parkServiceMock)
 
-        parkServiceMock.getCoasters.resolves([{
-            name: 'testName',
-            waitTime: 3,
-            shortName: 'test',
-            unnecessaryProperty: 'abc',
-            thrill: 1
-        }])
+            parkServiceMock.getCoasters.resolves([{
+                name: 'testName',
+                waitTime: 3,
+                shortName: 'test',
+                unnecessaryProperty: 'abc',
+                thrill: 1
+            }])
         }
     )
 
