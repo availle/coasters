@@ -44,4 +44,33 @@ describe('CoasterEndpoints', () => {
 
         expect(informationSentToFrontend[0].waitTime).to.equal(3)
     })
+
+    it('should only return coasters with a thrill rating > 0', async() => {
+        parkServiceMock.getCoasters.resolves([{
+            name: 'testName',
+            waitTime: 3,
+            shortName: 'test',
+            unnecessaryProperty: 'abc',
+            thrill: 1
+        },
+            {
+                name: 'veryBoringCoaster',
+                waitTime: 5,
+                shortName: 'test',
+                unnecessaryProperty: 'abc',
+                thrill: 0
+            }
+        ])
+
+        await coasterEndpoints.getCoasters(requestSpy, responseMock)
+
+        expect(responseMock.json).to.have.been.calledWith([
+            {
+                name: 'testName',
+                waitTime: 3,
+                thrill: 1
+            }
+        ])
+
+    })
 })

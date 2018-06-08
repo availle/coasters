@@ -28,4 +28,46 @@ describe('CoasterStore', () => {
             waitTime: 'testWaitTime'
         }])
     })
+
+    it('should sort coasters', async () => {
+        nock('http://localhost:3000')
+            .get('/coasters')
+            .reply(200,
+                [
+                    {
+                        name: 'testName',
+                        waitTime: 'testWaitTime',
+                        thrill: 3
+                    },
+                    {
+                        name: 'testName',
+                        waitTime: 'testWaitTime',
+                        thrill: 1
+                    },
+                    {
+                        name: 'testName',
+                        waitTime: 'testWaitTime',
+                        thrill: 5
+                    }
+                ])
+
+        await store.get()
+
+        expect(store.coasters).toEqual([
+            {
+                name: 'testName',
+                waitTime: 'testWaitTime',
+                thrill: 5
+            },
+            {
+                name: 'testName',
+                waitTime: 'testWaitTime',
+                thrill: 3
+            },
+            {
+                name: 'testName',
+                waitTime: 'testWaitTime',
+                thrill: 1
+            }])
+    })
 })

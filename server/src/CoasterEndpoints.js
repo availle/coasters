@@ -6,9 +6,12 @@ export default class CoasterEndpoints {
 
     async getCoasters(req, res, next) {
         const coasters = await this.parkService.getCoasters()
-        const coastersMappedForFrontend = coasters.map(coaster => ({
+        const coastersMappedForFrontend = coasters
+            .filter(coaster => ( coaster.thrill > 0))
+            .map(coaster => ({
             name: coaster.name,
-            waitTime: coaster.waitTime
+            waitTime: coaster.waitTime,
+            thrill: coaster.thrill
         }))
 
         res.json(coastersMappedForFrontend)

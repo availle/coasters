@@ -9,7 +9,7 @@ describe('<CoasterPage/>', function () {
     beforeEach(() => {
         coasterStoreMock = {
             loading: false,
-            coasters: [{ name: 'test', waitTime: 3 }],
+            coasters: [{ name: 'test', waitTime: 3, thrill: 4}],
             get: () => {
             }
         }

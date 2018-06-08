@@ -21,6 +21,7 @@ export default class CoasterPage extends React.Component {
                         <tr>
                             <td>Name</td>
                             <td>Waiting time</td>
+                            <td>Thrill</td>
                         </tr>
                         </thead>
                         <tbody>
@@ -35,6 +36,7 @@ export default class CoasterPage extends React.Component {
         return coasterStore.coasters.map((coaster, index) => {
             return <Coaster name={coaster.name}
                             waitTime={coaster.waitTime}
+                            thrill={coaster.thrill}
                             key={index}
             />
         })

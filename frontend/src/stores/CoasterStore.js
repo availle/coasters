@@ -13,8 +13,8 @@ export default class CoasterStore {
 
         const coasterResponse = await fetch(`http://localhost:3000/coasters`)
 
-        this.coasters = await coasterResponse.json()
-
+        const coasters = await coasterResponse.json()
+        this.coasters = coasters.sort((a,b) => (b.thrill - a.thrill))
         this.loading = false
     }
 }
